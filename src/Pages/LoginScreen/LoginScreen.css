@@ -1,0 +1,172 @@
+.loginScreen {
+  position: relative;
+  height: 100%;
+  background: url("http://s3-us-west-2.amazonaws.com/techvibes/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg")
+    center no-repeat;
+  background-size: cover;
+}
+.loginScreen__logo {
+  position: fixed;
+  left: 0;
+  top: -5px;
+  width: 165px;
+  object-fit: contain;
+  padding-left: 40px;
+}
+
+.loginScreen__btn {
+  position: fixed;
+  right: 50px;
+  top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+}
+
+.loginScreen__gradient {
+  width: 100%;
+  z-index: 1;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.loginScreen__body {
+  z-index: 1;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.loginScreen__body > h1 {
+  font-size: 3.125rem;
+  margin-bottom: 20px;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.1;
+}
+
+.loginScreen__body > h2 {
+  font-size: 1.645rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.loginScreen__body > h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0 5%;
+}
+
+.loginScreen__input {
+  max-width: 640px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.loginScreen__input > form {
+  display: flex;
+}
+
+.floating-input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  font-size: 1rem;
+  padding: 1.3rem 0 1rem 10px;
+}
+.floating-label {
+  background-color: #fff;
+  border-radius: 2px;
+  /* border-bottom: 2px solid #e87c03; */
+  position: relative;
+  flex: 0.7;
+}
+
+.floating-label > label {
+  position: absolute;
+  top: 5px;
+  color: #8c8c8c;
+  left: 10px;
+  line-height: 48px;
+  transition: 0.15s;
+  pointer-events: none;
+}
+
+.floating-label > input:focus + label {
+  line-height: 10px;
+  font-size: 12px;
+  color: #8c8c8c;
+  font-weight: bold;
+}
+
+form > .floating-label > input:not(:placeholder-shown) + label {
+  line-height: 10px;
+  font-size: 12px;
+  color: #8c8c8c;
+  font-weight: bold;
+}
+
+.loginScreen__input button {
+  flex: 0.3;
+  background-color: #e50914;
+  color: #fff;
+  border: 0.5px solid #111;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: 0.15ms ease-in;
+  z-index: 1;
+}
+
+.loginScreen__input button:hover {
+  background-color: #fc0814;
+}
+
+.email_valid {
+  text-align: left;
+  margin-top: 10px;
+  color: #e87c03;
+  font-weight: 400;
+}
+
+.signInScreen__body {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+}
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+  .loginScreen__logo {
+    width: 130px;
+    padding-left: 20px;
+  }
+  .loginScreen__btn {
+    top: 15px;
+    right: 20px;
+    font-size: 16px;
+    padding: 6px 15px;
+  }
+  .loginScreen__body > h1 {
+    font-size: 2rem;
+  }
+  .loginScreen__body > h2 {
+    font-size: 1.245rem;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -26,11 +27,13 @@ const Navbar = () => {
           alt="navbarlogo"
           className="navbar__logo"
         />
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-          alt="navbaravatar"
-          className="navbar__avatar"
-        />
+        <Link to="/profile">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+            alt="navbaravatar"
+            className="navbar__avatar"
+          />
+        </Link>
       </div>
     </nav>
   );
