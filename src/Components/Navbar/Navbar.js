@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/netflix-logo.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -22,11 +23,10 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${show && "navbar__black"}`}>
       <div className="navbar__content">
-        <img
-          src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
-          alt="navbarlogo"
-          className="navbar__logo"
-        />
+        <Link to="/">
+          <img src={logo} alt="navbarlogo" className="navbar__logo" />
+        </Link>
+
         <Link to="/profile">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"

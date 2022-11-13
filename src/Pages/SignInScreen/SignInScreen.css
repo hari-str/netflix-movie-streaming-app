@@ -93,3 +93,14 @@ form > .signIn-label > input:not(:placeholder-shown) + label {
 .errorMsg {
   color: #ff9720;
 }
+
+@media screen and (max-width: 767px) {
+  .signIn {
+    padding: 1rem;
+  }
+
+  .signInScreen__body {
+    top: 0%;
+    background: black;
+  }
+}

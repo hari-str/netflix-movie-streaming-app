@@ -37,3 +37,15 @@
   transform: scale(1.09);
   opacity: 1;
 }
+
+@media screen and (max-width: 767px) {
+  .row {
+    margin-left: 1rem;
+  }
+  .row > h3 {
+    font-size: 16px;
+  }
+  .row__posterLarge {
+    max-height: 200px;
+  }
+}

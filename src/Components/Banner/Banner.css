@@ -49,6 +49,9 @@
 }
 
 .banner__fadeBottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   height: 7.4rem;
   background-image: linear-gradient(
     180deg,
@@ -59,7 +62,26 @@
 }
 
 @media screen and (max-width: 767px) {
+  .banner {
+    min-height: 408px;
+  }
   .banner_description {
     width: auto;
+  }
+  .banner__title {
+    font-size: 2rem;
+  }
+
+  .banner__fadeBottom {
+    height: 6rem;
+  }
+
+  .banner__contents {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .banner__btn {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }

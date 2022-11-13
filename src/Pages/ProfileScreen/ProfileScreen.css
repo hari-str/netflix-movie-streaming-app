@@ -65,3 +65,26 @@
 .profile__signout:hover {
   background-color: #ff0915;
 }
+
+@media screen and (max-width: 767px) {
+  .profileScreen__body {
+    width: auto;
+    margin: 0 1rem;
+    padding-top: 15%;
+  }
+  .profileScreen__info {
+    flex-direction: column;
+  }
+  .profileScreen__body > h1 {
+    font-size: 2rem;
+  }
+
+  .profileScreen__info > img {
+    width: 100%;
+    height: auto;
+  }
+  .profile__details {
+    margin-left: 0px;
+    margin-top: 1rem;
+  }
+}
