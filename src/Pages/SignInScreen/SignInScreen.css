@@ -119,5 +119,6 @@ form > .signIn-label > input:not(:placeholder-shown) + label {
   .signInScreen__body {
     background: black;
     padding-top: 0px;
+    height: 100vh;
   }
 }
