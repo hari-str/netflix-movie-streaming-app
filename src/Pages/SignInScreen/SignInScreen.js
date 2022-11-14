@@ -11,6 +11,7 @@ const SignInScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(true);
+  const [passwordShown, setPasswordShown] = useState(false);
 
   const register = (e) => {
     e.preventDefault();
@@ -36,6 +37,10 @@ const SignInScreen = () => {
     setError(false);
   };
 
+  const togglePasswordVissible = () => {
+    setPasswordShown(passwordShown ? false : true);
+  };
+
   return (
     <div className="signIn">
       <h1 className="signIn__title">Sign In</h1>
@@ -58,7 +63,7 @@ const SignInScreen = () => {
           <div className="signIn-label">
             <input
               className="signIn-input"
-              type="password"
+              type={passwordShown ? "text" : "password"}
               value={password}
               placeholder=" "
               id="password"
@@ -67,6 +72,9 @@ const SignInScreen = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <label htmlFor="password">Password</label>
+            <span className="toggleVisible" onClick={togglePasswordVissible}>
+              {passwordShown ? "HIDE" : "SHOW"}
+            </span>
           </div>
           {error && <p className="errorMsg">{error}</p>}
           <button type="submit" onClick={signIn}>

@@ -25,7 +25,7 @@ const ProfileScreen = () => {
           />
 
           <div className="profile__details">
-            <h2>{user.email}</h2>
+            <h2>{user?.email}</h2>
             <div className="profile__plan">
               <h3>Plans</h3>
 

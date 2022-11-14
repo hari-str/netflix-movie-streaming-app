@@ -146,11 +146,6 @@ form > .floating-label > input:not(:placeholder-shown) + label {
   font-weight: 400;
 }
 
-.signInScreen__body {
-  position: absolute;
-  top: 10%;
-  width: 100%;
-}
 /* Mobile */
 
 @media screen and (max-width: 767px) {
@@ -158,6 +153,7 @@ form > .floating-label > input:not(:placeholder-shown) + label {
     width: 100px;
     padding-left: 10px;
     top: 10px;
+    z-index: 1;
   }
   .loginScreen__btn {
     top: 24px;

@@ -8,6 +8,14 @@
   border-radius: 5px;
 }
 
+.signInScreen__body {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+
 .signIn__title {
   text-align: left;
   margin-bottom: 2rem;
@@ -24,6 +32,8 @@
   padding: 1.5rem 0 0.5rem 10px;
 }
 .signIn-label {
+  display: flex;
+  align-items: center;
   overflow: hidden;
   background-color: #333;
   border-radius: 4px;
@@ -94,13 +104,21 @@ form > .signIn-label > input:not(:placeholder-shown) + label {
   color: #ff9720;
 }
 
+.toggleVisible {
+  cursor: pointer;
+  font-size: 14px;
+  padding-right: 10px;
+  color: #8c8c8c;
+}
+
 @media screen and (max-width: 767px) {
   .signIn {
-    padding: 1rem;
+    padding: 0 1rem;
+    padding-top: 5rem;
   }
 
   .signInScreen__body {
-    top: 0%;
     background: black;
+    padding-top: 0px;
   }
 }
