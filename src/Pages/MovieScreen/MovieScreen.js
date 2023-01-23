@@ -28,6 +28,7 @@ const MovieScreen = () => {
     };
 
     getData();
+    window.scrollTo(0,0)
   }, [id]);
 
   console.log(currentMovie);
