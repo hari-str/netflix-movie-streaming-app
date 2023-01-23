@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "../Row/Row.css";
+import "./Card.css";
 
 const Card = ({ movie, isLarge, base_url }) => {
   const [loading, setLoading] = useState(true);
@@ -13,11 +13,7 @@ const Card = ({ movie, isLarge, base_url }) => {
   return (
     <>
       {loading ? (
-        <div className="cards">
-          <SkeletonTheme baseColor="#202020" highlightColor="#444">
-            <Skeleton height={300} duration={2} />
-          </SkeletonTheme>
-        </div>
+        <div className={` ${isLarge ? "cards_large" : "cards"}`}></div>
       ) : (
         <Link
           to={`movie/${movie.id || movie.original_title}`}

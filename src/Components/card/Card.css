@@ -1,0 +1,44 @@
+.cards_large {
+  display: inline-block;
+  transition: transform 0.2s;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0.19rem;
+  cursor: pointer;
+  min-width: 150px;
+  height: 230px;
+  z-index: 0;
+  background-color: #444;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.cards {
+  display: inline-block;
+  transition: transform 0.2s;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0.19rem;
+  cursor: pointer;
+  min-width: 200px;
+  height: 100px;
+  z-index: 0;
+  background-color: #444;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(0, 0%, 23%);
+  }
+  100% {
+    background-color: hsl(0, 0%, 10%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cards_large {
+    max-height: 200px;
+  }
+}
