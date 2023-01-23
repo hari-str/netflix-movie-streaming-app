@@ -1,3 +1,65 @@
 .app {
   background-color: #111;
 }
+
+.loading_spiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid rgb(255, 0, 0);
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.movieScreen_wrapper {
+  color: #fff;
+  display: flex;
+  padding: 5rem 0;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.movieScreen_img {
+  /* width: 600px; */
+  height: auto;
+  flex: 0.3;
+}
+.movieScreen_content {
+  flex: 1;
+}
+.movieScreen_img img {
+  width: 100%;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .movieScreen_wrapper {
+    flex-direction: column;
+  }
+}

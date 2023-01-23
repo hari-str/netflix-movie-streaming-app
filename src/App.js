@@ -7,13 +7,13 @@ import { auth } from "./firebase";
 import HomeScreen from "./Pages/HomeScreen/HomeScreen";
 import LoginScreen from "./Pages/LoginScreen/LoginScreen";
 import ProfileScreen from "./Pages/ProfileScreen/ProfileScreen";
-
+import MovieScreen from "./Pages/MovieScreen/MovieScreen";
 import "./App.css";
 
 const App = () => {
   const user = useSelector(selectUser);
 
-  console.log(user);
+  // console.log(user);
 
   const dispatch = useDispatch();
 
@@ -42,6 +42,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomeScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
+            <Route path="/movie/:id" element={<MovieScreen />} />
           </Routes>
         )}
       </Router>
