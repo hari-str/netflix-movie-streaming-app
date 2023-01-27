@@ -67,7 +67,9 @@ const MovieScreen = () => {
                     </h1>
                     <div className="moviebanner__generic">
                       {currentMovie?.genres.map((genere, i) => (
-                        <div className="generic__item">{genere.name}</div>
+                        <div key={i} className="generic__item">
+                          {genere.name}
+                        </div>
                       ))}
                     </div>
                     <p className="moviebanner_description">
