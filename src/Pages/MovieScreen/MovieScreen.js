@@ -28,6 +28,8 @@ const MovieScreen = () => {
     };
 
     getData();
+
+    window.scrollTo(0, 0);
   }, [id]);
 
   console.log(currentMovie);
@@ -42,15 +44,42 @@ const MovieScreen = () => {
             <span className="loader"></span>
           </div>
         ) : (
-          <div className="movieScreen_wrapper">
-            <div className="movieScreen_img">
-              <img src={`${base_url}${currentMovie?.poster_path}`} alt="" />
-            </div>
-            <div className="movieScreen_content">
-              <h1>{currentMovie?.original_title}</h1>
-              <p>{currentMovie?.overview}</p>
-            </div>
-          </div>
+          <>
+            <header
+              className="moviebanner"
+              style={{
+                backgroundImage: `url(${base_url}${currentMovie?.backdrop_path})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center center",
+              }}
+            >
+              <div className="moviebanner_container">
+                <div className="moviebanner__wrapper">
+                  <div className="moviebanner_img">
+                    <img
+                      src={`${base_url}${currentMovie?.poster_path}`}
+                      alt=""
+                    />
+                  </div>
+                  <div className="moviebanner__contents">
+                    <h1 className="moviebanner__title">
+                      {currentMovie?.original_title}
+                    </h1>
+                    <div className="moviebanner__generic">
+                      {currentMovie?.genres.map((genere, i) => (
+                        <div className="generic__item">{genere.name}</div>
+                      ))}
+                    </div>
+                    <p className="moviebanner_description">
+                      {currentMovie?.overview}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="moviebanner__fadeBottom" />
+            </header>
+          </>
         )}
       </div>
       <Footer />

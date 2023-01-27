@@ -30,13 +30,14 @@ const SignInScreen = () => {
       .then((authUser) => {
         console.log(authUser);
       })
-      .catch((err) => {
-        // alert(err.message);
-        setError(err.message);
+      .catch((error) => {
+        setError(error.message);
       });
+
     setError(false);
   };
 
+  // console.log(error);
   const togglePasswordVissible = () => {
     setPasswordShown(passwordShown ? false : true);
   };

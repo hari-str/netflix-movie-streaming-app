@@ -7,7 +7,7 @@ const Card = ({ movie, isLarge, base_url }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1500);
+    setTimeout(() => setLoading(false), 2000);
   }, []);
 
   return (

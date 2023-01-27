@@ -31,9 +31,20 @@
 .movieScreen_wrapper {
   color: #fff;
   display: flex;
-  padding: 5rem 0;
   max-width: 1140px;
   margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.movieScreen {
+  height: 700px;
+}
+.movieScreen_banner {
+  position: relative;
+}
+.movieScreen_banner img {
+  width: 100%;
 }
 
 .movieScreen_img {
@@ -58,8 +69,74 @@
   font-weight: bold;
 }
 
+/* movie banner */
+
+.moviebanner {
+  height: 448px;
+  position: relative;
+  object-fit: contain;
+  color: #fff;
+}
+
+.moviebanner_container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.moviebanner__wrapper {
+  display: flex;
+  position: absolute;
+  bottom: -100px;
+  max-width: 1140px;
+}
+
+.moviebanner_img img {
+  width: 250px;
+}
+
+.moviebanner__contents {
+  flex: 1;
+  margin-left: 1rem;
+}
+.generic__item {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+}
+.moviebanner__generic {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.moviebanner_description {
+  margin-top: 1rem;
+}
+
+.moviebanner__fadeBottom {
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
 @media screen and (max-width: 767px) {
-  .movieScreen_wrapper {
+  .moviebanner__wrapper {
     flex-direction: column;
+    bottom: -265px;
+    padding: 1rem;
+  }
+  .moviebanner_img {
+    align-self: center;
+  }
+  .moviebanner__title {
+    font-size: 26px;
+  }
+  .generic__item {
+    font-size: 12px;
   }
 }
