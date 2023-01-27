@@ -130,6 +130,9 @@
     flex-direction: column;
     padding: 6rem 1rem;
   }
+  .moviebanner__contents {
+    margin-left: 0;
+  }
   .moviebanner_img {
     align-self: center;
   }
