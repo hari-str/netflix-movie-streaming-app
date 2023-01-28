@@ -42,7 +42,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomeScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
-            <Route path="/movie/:id" element={<MovieScreen />} />
+            <Route path="/:mediaType/:id" element={<MovieScreen />} />
           </Routes>
         )}
       </Router>

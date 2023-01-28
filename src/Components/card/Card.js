@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { mediaType } from "../../type";
 import "../Row/Row.css";
 import "./Card.css";
 
-const Card = ({ movie, isLarge, base_url }) => {
+const Card = ({ mediaType, movie, isLarge, base_url }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -16,7 +17,7 @@ const Card = ({ movie, isLarge, base_url }) => {
         <div className={` ${isLarge ? "cards_large" : "cards"}`}></div>
       ) : (
         <Link
-          to={`movie/${movie.id || movie.original_title}`}
+          to={`${mediaType}/${movie.id}`}
           className="row__poster__links"
           key={movie.id}
         >

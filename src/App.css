@@ -89,6 +89,10 @@
   max-width: 1140px;
 }
 
+.moviebanner__title {
+  font-size: 50px;
+  font-weight: 700;
+}
 .moviebanner_img img {
   width: 250px;
 }
@@ -96,6 +100,13 @@
 .moviebanner__contents {
   flex: 1;
   margin-left: 1rem;
+}
+
+.movie__casts {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 5rem;
+  color: #fff;
 }
 .generic__item {
   border: 1px solid #fff;

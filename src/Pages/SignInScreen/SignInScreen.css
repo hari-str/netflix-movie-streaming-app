@@ -66,7 +66,7 @@ form > .signIn-label > input:not(:placeholder-shown) + label {
   font-weight: bold;
 }
 
-.signInScreen__input button {
+.signInScreen__input .signin__btn {
   background-color: #e50914;
   color: #fff;
   border: 0.5px solid #111;
@@ -80,7 +80,7 @@ form > .signIn-label > input:not(:placeholder-shown) + label {
   margin-top: 2rem;
 }
 
-.signInScreen__input button:hover {
+.signInScreen__input .signin__btn:hover {
   background-color: #fc0814;
 }
 
@@ -110,6 +110,39 @@ form > .signIn-label > input:not(:placeholder-shown) + label {
   color: #8c8c8c;
 }
 
+.signin_loading {
+  background-color: #cc111a;
+  color: #fff;
+  border: 0.5px solid #111;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5rem;
+  transition: 0.15ms ease-in;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.signin_loader {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 2px solid rgb(224, 224, 224);
+  border-right: 2px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (max-width: 767px) {
   .signIn {
     padding: 0 1rem;

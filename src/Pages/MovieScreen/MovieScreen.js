@@ -2,20 +2,24 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { API_KEY } from "../../apiUrl";
+import Casts from "../../Components/Casts/Casts";
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navbar/Navbar";
+// import { mediaType } from "../../type";
 
 const MovieScreen = () => {
-  const { id } = useParams();
+  const { mediaType, id } = useParams();
   const [currentMovie, setCurrentMovie] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 
   const base_url = "https://image.tmdb.org/t/p/original";
   useEffect(() => {
-    const getData = () => {
+    const getData = async () => {
       axios
-        .get(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`)
+        .get(
+          `https://api.themoviedb.org/3/${mediaType}/${id}?api_key=${API_KEY}`
+        )
         .then((response) => {
           setCurrentMovie(response.data);
           setIsLoading(false);
@@ -63,7 +67,8 @@ const MovieScreen = () => {
                   </div>
                   <div className="moviebanner__contents">
                     <h1 className="moviebanner__title">
-                      {currentMovie?.original_title}
+                      {currentMovie?.original_title ||
+                        currentMovie?.original_name}
                     </h1>
                     <div className="moviebanner__generic">
                       {currentMovie?.genres.map((genere, i) => (
@@ -81,6 +86,7 @@ const MovieScreen = () => {
 
               <div className="moviebanner__fadeBottom" />
             </header>
+            <Casts />
           </>
         )}
       </div>

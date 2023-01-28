@@ -3,7 +3,7 @@ import axios from "../../helpers/axios";
 import "./Row.css";
 import Card from "../card/Card";
 
-const Row = ({ title, fetchUrl, isLarge = false }) => {
+const Row = ({ mediaType, title, fetchUrl, isLarge = false }) => {
   const [movies, setMovies] = useState([]);
 
   const base_url = "https://image.tmdb.org/t/p/original";
@@ -20,6 +20,7 @@ const Row = ({ title, fetchUrl, isLarge = false }) => {
     fetchData();
   }, [fetchUrl]);
 
+  // console.log(mediaType);
   return (
     <div className="row">
       <h3>{title}</h3>
@@ -28,7 +29,12 @@ const Row = ({ title, fetchUrl, isLarge = false }) => {
           (movie) =>
             ((isLarge && movie?.poster_path) ||
               (!isLarge && movie?.backdrop_path)) && (
-              <Card movie={movie} isLarge={isLarge} base_url={base_url} />
+              <Card
+                movie={movie}
+                isLarge={isLarge}
+                base_url={base_url}
+                mediaType={mediaType}
+              />
             )
         )}
       </div>

@@ -11,6 +11,7 @@ const SignInScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(true);
+  const [loading, setLoading] = useState();
   const [passwordShown, setPasswordShown] = useState(false);
 
   const register = (e) => {
@@ -26,14 +27,18 @@ const SignInScreen = () => {
 
   const signIn = (e) => {
     e.preventDefault();
+    setLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((authUser) => {
         console.log(authUser);
+        setLoading(false);
       })
       .catch((error) => {
+        console.log(error.message);
         setError(error.message);
+        setLoading(false);
       });
-
+    //
     setError(false);
   };
 
@@ -78,9 +83,16 @@ const SignInScreen = () => {
             </span>
           </div>
           {error && <p className="errorMsg">{error}</p>}
-          <button type="submit" onClick={signIn}>
-            Sign In
-          </button>
+
+          {loading ? (
+            <button className="signin_loading">
+              <span className="signin_loader"></span>
+            </button>
+          ) : (
+            <button type="submit" onClick={signIn} className="signin__btn">
+              Sign In
+            </button>
+          )}
         </form>
       </div>
       <p className="signup__content">
