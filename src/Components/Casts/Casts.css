@@ -26,16 +26,27 @@
   margin-right: 1rem;
   background-color: #2a2a2a;
   border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
+.cast_name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  color: #fff;
+  background: rgb(0 0 0 / 82%);
+}
 .casts__img::-webkit-scrollbar {
   display: none;
 }
 
 @media screen and (max-width: 767px) {
   .casts__wrapper {
-    padding-top: 20rem;
     margin: 0 1rem;
+    padding-top: 2rem;
   }
   .casts__wrapper h1 {
     font-size: 20px;

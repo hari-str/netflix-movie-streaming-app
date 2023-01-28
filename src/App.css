@@ -38,7 +38,7 @@
 }
 
 .movieScreen {
-  height: 1200px;
+  height: 1600px;
 }
 .movieScreen_banner {
   position: relative;
@@ -84,14 +84,18 @@
 }
 .moviebanner__wrapper {
   display: flex;
-  position: absolute;
-  padding: 8rem 0;
+  /* position: absolute; */
+  padding-top: 8rem;
   max-width: 1140px;
 }
 
 .moviebanner__title {
   font-size: 50px;
   font-weight: 700;
+}
+
+.moviebanner_img {
+  z-index: 2;
 }
 .moviebanner_img img {
   width: 250px;
@@ -100,6 +104,7 @@
 .moviebanner__contents {
   flex: 1;
   margin-left: 1rem;
+  z-index: 2;
 }
 
 .movie__casts {
@@ -128,6 +133,8 @@
   width: 100%;
   z-index: 1;
   height: 100%;
+  position: absolute;
+  top: 0;
   background: rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(
     to top,
@@ -139,7 +146,8 @@
 @media screen and (max-width: 767px) {
   .moviebanner__wrapper {
     flex-direction: column;
-    padding: 6rem 1rem;
+    /* padding: 6rem 1rem; */
+    margin: 0 1rem;
   }
   .moviebanner__contents {
     margin-left: 0;

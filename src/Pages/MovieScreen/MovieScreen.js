@@ -82,11 +82,10 @@ const MovieScreen = () => {
                     </p>
                   </div>
                 </div>
+                <Casts />
               </div>
-
               <div className="moviebanner__fadeBottom" />
             </header>
-            <Casts />
           </>
         )}
       </div>

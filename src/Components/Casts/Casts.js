@@ -17,7 +17,6 @@ const Casts = () => {
           `https://api.themoviedb.org/3/${mediaType}/${id}/credits?api_key=${API_KEY}&language=en-US`
         )
         .then((response) => {
-          // console.log(response.data);
           setCasts(response.data.cast);
         })
         .catch((err) => console.log(err));
@@ -31,9 +30,12 @@ const Casts = () => {
         {casts &&
           casts.map((cast, i) => {
             return (
-              <div className="cast" key={i}>
-                <img src={`${base_url}${cast.profile_path}`} />
-              </div>
+              <>
+                <div className="cast" key={i}>
+                  <img src={`${base_url}${cast.profile_path}`} />
+                  <div className="cast_name">{cast.name}</div>
+                </div>
+              </>
             );
           })}
       </div>
