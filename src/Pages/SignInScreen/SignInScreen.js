@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -8,6 +8,7 @@ import { auth } from "../../firebase";
 import "./SignInScreen.css";
 
 const SignInScreen = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(true);
@@ -32,6 +33,7 @@ const SignInScreen = () => {
       .then((authUser) => {
         console.log(authUser);
         setLoading(false);
+        navigate("/");
       })
       .catch((error) => {
         console.log(error.message);

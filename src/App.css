@@ -146,7 +146,7 @@
 @media screen and (max-width: 767px) {
   .moviebanner__wrapper {
     flex-direction: column;
-    /* padding: 6rem 1rem; */
+    padding-top: 6rem;
     margin: 0 1rem;
   }
   .moviebanner__contents {

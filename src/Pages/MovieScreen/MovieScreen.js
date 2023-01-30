@@ -32,11 +32,12 @@ const MovieScreen = () => {
     };
 
     getData();
-
     window.scrollTo(0, 0);
   }, [id]);
 
-  console.log(currentMovie);
+  function truncate(string, n) {
+    return string?.length > n ? string.substr(0, n - 1) + "..." : string;
+  }
 
   return (
     <>
@@ -78,7 +79,7 @@ const MovieScreen = () => {
                       ))}
                     </div>
                     <p className="moviebanner_description">
-                      {currentMovie?.overview}
+                      {truncate(currentMovie?.overview, 250)}
                     </p>
                   </div>
                 </div>

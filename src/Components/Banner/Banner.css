@@ -27,27 +27,59 @@
   height: 80px;
 }
 
-.banner__btn {
-  background-color: rgba(17, 9, 9, 0.5);
-  color: #fff;
+.banner__buttons {
+  display: flex;
+}
+.banner__buttons a {
+  text-decoration: none;
+}
+.banner__playbtn {
+  display: flex;
+  align-items: center;
+  color: #111;
+  background-color: #f3f3f3;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 0.4rem 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.banner__listbtn {
+  display: flex;
+  align-items: center;
+  background-color: rgb(92 92 92 / 85%);
+  color: #f3f3f3;
+  font-size: 16px;
   outline: none;
   border: none;
   font-weight: 700;
   border-radius: 0.2vw;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
   margin-right: 1rem;
   cursor: pointer;
 }
 
-.banner__btn:hover {
+.banner__playbtn:hover {
   color: #000;
   background-color: #e6e6e6;
   transition: all 0.2s;
 }
 
+.banner__listbtn:hover {
+  background-color: rgb(24 24 24 / 87%);
+  transition: all 0.2s;
+}
+
+.play_icon,
+.info_icon {
+  font-size: 24px;
+  margin-right: 5px;
+}
 .banner__fadeBottom {
   position: absolute;
   width: 100%;
@@ -71,7 +103,14 @@
   .banner__title {
     font-size: 2rem;
   }
-
+  .banner__playbtn,
+  .banner__listbtn {
+    padding: 0.4rem 1rem;
+  }
+  .play_icon,
+  .info_icon {
+    font-size: 16px;
+  }
   .banner__fadeBottom {
     height: 6rem;
   }

@@ -11,7 +11,7 @@ const HomeScreen = () => {
     <div className="homeScreen">
       <Navbar />
 
-      <Banner />
+      <Banner mediaType={mediaType.tv} />
       <Row
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/netflix-logo.png";
+import profileIcon from "../../assets/profile-icon.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -29,7 +30,7 @@ const Navbar = () => {
 
         <Link to="/profile">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+            src={profileIcon}
             alt="navbaravatar"
             className="navbar__avatar"
           />
