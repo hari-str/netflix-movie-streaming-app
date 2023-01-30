@@ -8,7 +8,7 @@ const Card = ({ mediaType, movie, isLarge, base_url }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
+    setTimeout(() => setLoading(false), 800);
   }, []);
 
   return (
@@ -21,13 +21,15 @@ const Card = ({ mediaType, movie, isLarge, base_url }) => {
           className="row__poster__links"
           key={movie.id}
         >
-          <img
-            className={`row__poster ${isLarge && "row__posterLarge"}`}
-            src={`${base_url}${
-              isLarge ? movie.poster_path : movie.backdrop_path
-            }`}
-            alt={movie.original_title}
-          />
+          <div className={`row__poster ${isLarge && "row__posterLarge"}`}>
+            <img
+              src={`${base_url}${
+                isLarge ? movie.poster_path : movie.backdrop_path
+              }`}
+              alt={movie.original_title}
+              className="row__img"
+            />
+          </div>
         </Link>
       )}
     </>

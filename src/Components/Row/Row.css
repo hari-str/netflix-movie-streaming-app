@@ -15,10 +15,14 @@
 }
 
 .row__poster {
-  max-height: 120px;
+  height: 124px;
+  width: 220px;
   object-fit: contain;
   transition: transform 450ms;
+  background-color: #262626;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .row__poster__links {
@@ -31,10 +35,19 @@
 }
 
 .row__posterLarge {
-  max-height: 230px;
+  height: 230px;
+  width: 154px;
   cursor: pointer;
+  border-radius: 5px;
+  background-color: #262626;
+  overflow: hidden;
 }
 
+.row__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .row__posterLarge:hover {
   transform: scale(1.09);
   opacity: 1;
@@ -45,9 +58,10 @@
     margin-left: 1rem;
   }
   .row > h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .row__posterLarge {
     max-height: 180px;
+    max-width: 120px;
   }
 }

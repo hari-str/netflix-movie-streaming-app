@@ -32,6 +32,7 @@
 }
 .banner__buttons a {
   text-decoration: none;
+  cursor: pointer;
 }
 .banner__playbtn {
   display: flex;
@@ -42,7 +43,7 @@
   border: none;
   font-weight: 700;
   border-radius: 4px;
-  padding: 0.4rem 2rem;
+  padding: 0.5rem 1.2rem;
   margin-right: 1rem;
   cursor: pointer;
   font-size: 16px;
@@ -57,8 +58,7 @@
   outline: none;
   border: none;
   font-weight: 700;
-  border-radius: 0.2vw;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 4px;
   margin-right: 1rem;
   cursor: pointer;

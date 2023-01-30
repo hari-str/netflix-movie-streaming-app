@@ -9,6 +9,7 @@ import LoginScreen from "./Pages/LoginScreen/LoginScreen";
 import ProfileScreen from "./Pages/ProfileScreen/ProfileScreen";
 import MovieScreen from "./Pages/MovieScreen/MovieScreen";
 import "./App.css";
+import WatchScreen from "./Pages/WatchScreen/WatchScreen";
 
 const App = () => {
   const user = useSelector(selectUser);
@@ -43,6 +44,7 @@ const App = () => {
             <Route path="/" element={<HomeScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
             <Route path="/:mediaType/:id" element={<MovieScreen />} />
+            <Route path="/watch/:mediaType/:id" element={<WatchScreen />} />
           </Routes>
         )}
       </Router>

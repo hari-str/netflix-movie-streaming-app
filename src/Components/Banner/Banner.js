@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "../../helpers/axios";
 import requests from "../../helpers/requests";
-import { FaPlay } from "react-icons/fa";
-import { AiOutlineInfoCircle } from "react-icons/ai";
+import { MdInfoOutline, MdPlayArrow } from "react-icons/md";
 import "./Banner.css";
 import { Link } from "react-router-dom";
 
@@ -42,12 +41,15 @@ const Banner = ({ mediaType }) => {
         </h1>
 
         <div className="banner__buttons">
-          <Link to={`${mediaType}/${movie.id}`} className="banner__playbtn">
-            <FaPlay className="play_icon" /> Play
+          <Link
+            to={`watch/${mediaType}/${movie.id}`}
+            className="banner__playbtn"
+          >
+            <MdPlayArrow className="play_icon" /> Play
           </Link>
 
           <Link to={`${mediaType}/${movie.id}`} className="banner__listbtn">
-            <AiOutlineInfoCircle className="info_icon" />
+            <MdInfoOutline className="info_icon" />
             More Info
           </Link>
         </div>

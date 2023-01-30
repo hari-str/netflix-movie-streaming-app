@@ -99,6 +99,7 @@
 }
 .moviebanner_img img {
   width: 250px;
+  border-radius: 5px;
 }
 
 .moviebanner__contents {
@@ -129,6 +130,28 @@
   margin-top: 1rem;
 }
 
+.moviebanner__playbtn {
+  display: flex;
+  align-items: center;
+  width: 60px;
+  color: #111;
+  background-color: #f3f3f3;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 0.5rem 1.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.moviebanner__playbtn:hover {
+  color: #000;
+  background-color: #e6e6e6;
+  transition: all 0.2s;
+}
 .moviebanner__fadeBottom {
   width: 100%;
   z-index: 1;

@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { API_KEY } from "../../apiUrl";
+import { MdPlayArrow } from "react-icons/md";
 import Casts from "../../Components/Casts/Casts";
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navbar/Navbar";
+
 // import { mediaType } from "../../type";
 
 const MovieScreen = () => {
@@ -81,6 +83,12 @@ const MovieScreen = () => {
                     <p className="moviebanner_description">
                       {truncate(currentMovie?.overview, 250)}
                     </p>
+                    <Link
+                      to={`/watch/${mediaType}/${currentMovie.id}`}
+                      className="moviebanner__playbtn"
+                    >
+                      <MdPlayArrow className="play_icon" /> Play
+                    </Link>
                   </div>
                 </div>
                 <Casts />
