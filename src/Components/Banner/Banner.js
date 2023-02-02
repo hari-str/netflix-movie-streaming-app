@@ -42,13 +42,13 @@ const Banner = ({ mediaType }) => {
 
         <div className="banner__buttons">
           <Link
-            to={`watch/${mediaType}/${movie.id}`}
+            to={`watch/${mediaType}/${movie?.id}`}
             className="banner__playbtn"
           >
             <MdPlayArrow className="play_icon" /> Play
           </Link>
 
-          <Link to={`${mediaType}/${movie.id}`} className="banner__listbtn">
+          <Link to={`${mediaType}/${movie?.id}`} className="banner__listbtn">
             <MdInfoOutline className="info_icon" />
             More Info
           </Link>

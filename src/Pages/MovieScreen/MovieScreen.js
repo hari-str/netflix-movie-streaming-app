@@ -6,8 +6,8 @@ import { MdPlayArrow } from "react-icons/md";
 import Casts from "../../Components/Casts/Casts";
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navbar/Navbar";
-
-// import { mediaType } from "../../type";
+import Backdrop from "../../Components/Backdrop/Backdrop";
+import Loading from "../../Components/Loading/Loading";
 
 const MovieScreen = () => {
   const { mediaType, id } = useParams();
@@ -41,15 +41,14 @@ const MovieScreen = () => {
     return string?.length > n ? string.substr(0, n - 1) + "..." : string;
   }
 
+  // console.log(currentMovie);
   return (
     <>
       <Navbar />
       <div className="movieScreen">
         {error && <div className="error">Movie not found</div>}
         {isLoading ? (
-          <div className="loading_spiner">
-            <span className="loader"></span>
-          </div>
+          <Loading />
         ) : (
           <>
             <header
@@ -87,11 +86,13 @@ const MovieScreen = () => {
                       to={`/watch/${mediaType}/${currentMovie.id}`}
                       className="moviebanner__playbtn"
                     >
-                      <MdPlayArrow className="play_icon" /> Play
+                      <MdPlayArrow className="movieplay_icon" /> Play
                     </Link>
                   </div>
                 </div>
                 <Casts />
+
+                <Backdrop base_url={base_url} mediaType={mediaType} id={id} />
               </div>
               <div className="moviebanner__fadeBottom" />
             </header>

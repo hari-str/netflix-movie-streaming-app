@@ -26,7 +26,7 @@ const Row = ({ mediaType, title, fetchUrl, isLarge = false }) => {
       <h3>{title}</h3>
       <div className="row__posters">
         {movies.map(
-          (movie) =>
+          (movie, i) =>
             ((isLarge && movie?.poster_path) ||
               (!isLarge && movie?.backdrop_path)) && (
               <Card
@@ -34,6 +34,7 @@ const Row = ({ mediaType, title, fetchUrl, isLarge = false }) => {
                 isLarge={isLarge}
                 base_url={base_url}
                 mediaType={mediaType}
+                key={i}
               />
             )
         )}

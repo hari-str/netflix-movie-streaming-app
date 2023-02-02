@@ -4,12 +4,17 @@ import { useSelector, useDispatch } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
+
 import HomeScreen from "./Pages/HomeScreen/HomeScreen";
 import LoginScreen from "./Pages/LoginScreen/LoginScreen";
 import ProfileScreen from "./Pages/ProfileScreen/ProfileScreen";
 import MovieScreen from "./Pages/MovieScreen/MovieScreen";
-import "./App.css";
 import WatchScreen from "./Pages/WatchScreen/WatchScreen";
+
+import "./App.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const App = () => {
   const user = useSelector(selectUser);

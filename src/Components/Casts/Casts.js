@@ -7,7 +7,7 @@ import { API_KEY } from "../../apiUrl";
 import "./Casts.css";
 
 const Casts = () => {
-  const { mediaType, id } = useParams([]);
+  const { mediaType, id } = useParams();
   const [casts, setCasts] = useState();
   const base_url = "https://image.tmdb.org/t/p/original";
   useEffect(() => {
@@ -30,12 +30,10 @@ const Casts = () => {
         {casts &&
           casts.map((cast, i) => {
             return (
-              <>
-                <div className="cast" key={i}>
-                  <img src={`${base_url}${cast.profile_path}`} />
-                  <div className="cast_name">{cast.name}</div>
-                </div>
-              </>
+              <div className="cast" key={i}>
+                <img src={`${base_url}${cast.profile_path}`} />
+                <div className="cast_name">{cast.name}</div>
+              </div>
             );
           })}
       </div>

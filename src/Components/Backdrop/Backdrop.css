@@ -1,0 +1,39 @@
+.backdrop__container {
+  margin-top: 3rem;
+}
+
+.backdrop__container h1 {
+  margin-bottom: 1rem;
+}
+.backdrop__container img {
+  width: 100%;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+}
+
+@media screen and (max-width: 767px) {
+  .backdrop__container {
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
+  .backdrop__container h1 {
+    font-size: 20px;
+  }
+  .swiper-pagination-bullet {
+    font-size: 14px !important;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 14px !important;
+  }
+}

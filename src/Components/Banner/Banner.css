@@ -105,11 +105,11 @@
   }
   .banner__playbtn,
   .banner__listbtn {
-    padding: 0.4rem 1rem;
+    padding: 0.5rem 0.8rem;
   }
   .play_icon,
   .info_icon {
-    font-size: 16px;
+    font-size: 22px;
   }
   .banner__fadeBottom {
     height: 6rem;
